@@ -19,5 +19,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('budgets/', include('app.budgets.urls')), # budgetsのurlを作成したら有効化する
+    path('budgets/', include('app.budgets.urls')), # budgets
 ]
