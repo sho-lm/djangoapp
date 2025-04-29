@@ -16,8 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from app.budgets import views as budgets_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('budgets/', include('app.budgets.urls')), # budgets
+    path('', budgets_views.top, name='index'), # /のパスはいったんはbudgetsのtopを表示しておく
 ]
