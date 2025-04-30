@@ -4,5 +4,5 @@ from app.budgets import views
 
 app_name = 'budgets'
 urlpatterns = [
-    path('index', views.index, name='index'),
+    path('', views.top, name='top'),
 ]
