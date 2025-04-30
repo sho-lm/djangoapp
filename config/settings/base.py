@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app.budgets.apps.BudgetsConfig'    # budgets
+    'app.budgets.apps.BudgetsConfig',    # budgets
+    'webpack_loader'    # webpack用
 ]
 
 MIDDLEWARE = [

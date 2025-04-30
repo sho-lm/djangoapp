@@ -12,3 +12,7 @@ def index(request):
 def top(request):
     context = {} # 収支の取得結果などを入れる
     return render(request, 'budgets/top.html', context)
+
+# 疎通用
+def test(request):
+    return render(request, 'index.html')

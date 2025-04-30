@@ -1,0 +1,14 @@
+{
+  "status": "done",
+  "assets": {
+    "bundle.js": {
+      "name": "bundle.js",
+      "path": "C:\\Users\\s_h2m\\development\\python\\djangoapp\\static\\assets\\bundle.js"
+    }
+  },
+  "chunks": {
+    "main": [
+      "bundle.js"
+    ]
+  }
+}
