@@ -1,0 +1,7 @@
+{
+  "name": "djangoapp",
+  "scripts": {
+    "build": "webpack --mode=development --watch",
+    "build-prod": "webpack --mode=production"
+  }
+}
