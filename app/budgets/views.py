@@ -8,6 +8,7 @@ from django.http import HttpResponse
 def index(request):
     return redirect('/budgets/')
 
-# 一覧画面
+# 一覧画面(トップページ)
 def top(request):
-    return HttpResponse('Hello World')
+    context = {} # 収支の取得結果などを入れる
+    return render(request, 'budgets/top.html', context)
