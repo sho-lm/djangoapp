@@ -4,10 +4,15 @@
     "bundle.js": {
       "name": "bundle.js",
       "path": "C:\\Users\\s_h2m\\development\\python\\djangoapp\\static\\build\\bundle.js"
+    },
+    "main.css": {
+      "name": "main.css",
+      "path": "C:\\Users\\s_h2m\\development\\python\\djangoapp\\static\\build\\main.css"
     }
   },
   "chunks": {
     "main": [
+      "main.css",
       "bundle.js"
     ]
   }
