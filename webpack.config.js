@@ -1,6 +1,5 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin'); // cssを別ファイルに抽出するため
-const webpack = require('webpack');
 const BundleTracker = require('webpack-bundle-tracker');
 const { VueLoaderPlugin } = require('vue-loader')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin'); // ビルドしたjsファイルの不要になったものを自動で削除する
@@ -22,7 +21,9 @@ module.exports = {
             verbose: true
         }),
         new VueLoaderPlugin(),
-        new MiniCssExtractPlugin()
+        new MiniCssExtractPlugin({
+            filename: 'style.css'
+        })
     ],
     module: {
         rules:[

@@ -17,6 +17,6 @@ export default {
 
 <style lang="css">
     .hoge {
-        color: red;
+        color: blue;
     }
 </style>
