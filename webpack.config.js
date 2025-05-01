@@ -1,7 +1,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin'); // cssを別ファイルに抽出するため
 const BundleTracker = require('webpack-bundle-tracker');
-const { VueLoaderPlugin } = require('vue-loader')
+const { VueLoaderPlugin, default: loader } = require('vue-loader')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin'); // ビルドしたjsファイルの不要になったものを自動で削除する
 
 module.exports = {
@@ -30,6 +30,18 @@ module.exports = {
             {
                 test: /\.vue$/,
                 loader: 'vue-loader'
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: [
+                            ['@babel/preset-env', { targets: "ie 11" }] // ie11でも読める変換(es5)にする(公式ドキュメント参照)
+                        ]
+                    }
+                }
             },
             {
                 test: /\.(c|sc)ss$/, // cssとscssのルール
