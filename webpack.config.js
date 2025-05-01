@@ -6,11 +6,11 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin'); // ビルドし�
 
 module.exports = {
     // バンドル対象のファイル
-    entry:　'./frontend/main.js',
+    entry:　'./frontend/index.js',
     mode: 'development',
     output: {
         filename: 'bundle.js' ,
-        path: path.resolve(__dirname, 'static/assets')
+        path: path.resolve(__dirname, 'static/build')
     },
     plugins: [
         new BundleTracker({
@@ -31,12 +31,9 @@ module.exports = {
         ]
     },
     resolve: {
-        extensions: ['.vue'],
-        modules: [
-            'node_modules'
-        ],
+        // import 文で拡張子を省略できる
+        extensions: ['.js', '.ts', '.vue', '.css', '.scss'],
         alias: {
-            'vue': path.resolve('./node_modules/vue/dist/vue.js')
         }
     },
 }
