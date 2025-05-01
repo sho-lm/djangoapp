@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="hoge">
         {{ message }}
     </div>
 </template>
@@ -15,6 +15,8 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss">
+    .hoge {
+        color: red;
+    }
 </style>
