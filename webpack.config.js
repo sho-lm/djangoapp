@@ -1,12 +1,12 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin'); // cssを別ファイルに抽出するため
 const BundleTracker = require('webpack-bundle-tracker');
-const { VueLoaderPlugin, default: loader } = require('vue-loader')
+const { VueLoaderPlugin } = require('vue-loader')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin'); // ビルドしたjsファイルの不要になったものを自動で削除する
 
 module.exports = {
     // バンドル対象のファイル
-    entry:　'./frontend/index.js',
+    entry: './frontend/index.js',
     mode: 'development',
     output: {
         filename: 'bundle.js' ,
