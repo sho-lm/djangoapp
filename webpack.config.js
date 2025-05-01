@@ -32,12 +32,13 @@ module.exports = {
                 loader: 'vue-loader'
             },
             {
-                test: /\.css$/,
+                test: /\.(c|sc)ss$/, // cssとscssのルール
                 use:[
                     {
-                        loader: MiniCssExtractPlugin.loader
+                        loader: MiniCssExtractPlugin.loader // 別ファイル抽出
                     },
-                    'css-loader'
+                    'css-loader',
+                    'sass-loader'
                 ]
             }
         ]
