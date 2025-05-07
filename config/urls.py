@@ -21,6 +21,7 @@ from app.budgets import views as budgets_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('budgets/', include('app.budgets.urls')), # budgets
+    path('accounts/', include('app.accounts.urls')), # accounts
     # path('', budgets_views.index, name='index'), # /のパスはいったんはbudgetsのtopを表示しておく
     # ''のパスを疎通確認用にする
     path ('', budgets_views.test, name='test')

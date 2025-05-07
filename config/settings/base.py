@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app.budgets.apps.BudgetsConfig',    # budgets
+    'app.accounts.apps.AccountsConfig',  # accounts
     'webpack_loader'    # webpack用
 ]
 
