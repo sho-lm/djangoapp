@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'app.budgets.apps.BudgetsConfig',    # budgets
     'app.accounts.apps.AccountsConfig',  # accounts
-    'webpack_loader'    # webpack用
+    'webpack_loader',    # webpack
+    'rest_framework' # rest_framework
 ]
 
 MIDDLEWARE = [
