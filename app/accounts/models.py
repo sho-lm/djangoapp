@@ -37,7 +37,7 @@ class User(AbstractBaseUser):
         default=False
     )
     
-    objects = UserManager() # User.objects.all()のように取得するときに、ORM(Object-RelationMapping)の設定
+    objects = UserManager() # User.objects.all()などの時に使用するORM(Object-RelationMapping)の設定
     
     USERNAME_FIELD = 'account_id' # ログイン時、ユーザー名の代わりにaccount_idを使用する
     
