@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app.budgets.apps.BudgetsConfig',    # budgets
-    'webpack_loader'    # webpack用
+    'app.accounts.apps.AccountsConfig',  # accounts
+    'webpack_loader',    # webpack
+    'rest_framework' # rest_framework
 ]
 
 MIDDLEWARE = [
@@ -129,3 +131,6 @@ STATICFILES_DIRS = [BASE_DIR / 'static']
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# ログイン後のリダイレクト先
+LOGIN_REDIRECT_URL = "accounts:index"
